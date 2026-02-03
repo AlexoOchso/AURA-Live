@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA - Multiverse Control Center</title>
+    <style>
+        :root {
+            --bg: #030712;
+            --card-bg: #111827;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.4);
+            --buy: #10b981;
+            --sell: #ef4444;
+            --hold: #94a3b8;
+            --insider: #fbbf24;
+        }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: #f3f4f6; margin: 0; padding: 20px; }
+        header { border-bottom: 1px solid #374151; padding-bottom: 20px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .aura-logo { font-size: 2em; font-weight: 800; letter-spacing: -1px; color: var(--accent); text-shadow: 0 0 15px var(--accent-glow); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .sector-title { font-size: 1.4em; font-weight: 600; margin: 40px 0 15px 0; border-left: 4px solid var(--accent); padding-left: 15px; color: #9ca3af; }
+        .card { background: var(--card-bg); border: 1px solid #1f2937; border-radius: 16px; padding: 24px; position: relative; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card h3 { margin: 0 0 10px 0; font-size: 1.5em; }
+        .price { font-size: 1.8em; font-weight: 700; margin-bottom: 15px; }
+        .status-badge { display: inline-block; padding: 4px 12px; border-radius: 99px; font-size: 0.85em; font-weight: 600; margin-bottom: 15px; }
+        .buy-badge { background: rgba(16, 185, 129, 0.1); color: var(--buy); border: 1px solid var(--buy); }
+        .hold-badge { background: rgba(148, 163, 184, 0.1); color: var(--hold); border: 1px solid var(--hold); }
+        .insider-banner { background: rgba(251, 191, 36, 0.1); border: 1px solid var(--insider); color: var(--insider); padding: 12px; border-radius: 10px; font-size: 0.9em; margin-bottom: 20px; animation: pulse 2s infinite; }
+        .nn-logic { background: #000; border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: #34d399; margin-top: 15px; border: 1px dashed #334155; }
+        @keyframes pulse { 0% { opacity: 0.8; } 50% { opacity: 1; } 100% { opacity: 0.8; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="aura-logo">AURA NEURAL V1.2</div>
+        <div style="text-align: right;">
+            <div style="font-size: 0.9em; color: #6b7280;">Neural State: <span style="color: #10b981;">SYNCED</span></div>
+            <div style="font-weight: 600;">Paper Balance: 112,450.00 USD</div>
+        </div>
+    </header>
+
+    <div class="insider-banner">
+        🚀 <strong>CRITICAL HYPE ALERT:</strong> Massive Insider Buying detected in <strong>Lemonade (LMND)</strong> & <strong>GameStop (GME)</strong>. Sentiment-Delta > 45%.
+    </div>
+
+    <div class="sector-title">🌍 GLOBAL MACRO & GEOPOLITICS</div>
+    <div class="grid">
+        <div class="card" style="border-left: 4px solid #f472b6;">
+            <span class="status-badge hold-badge" style="color: #f472b6; border-color: #f472b6;">MACRO RADAR</span>
+            <h3>US Dollar (USD) Sentiment</h3>
+            <p style="color: #ef4444;">Trend: Kaufkraft-Verlust Risiko</p>
+            <p style="font-size: 0.9em; color: #9ca3af;">Schlüsselthemen: Inflation, geopolitische Spannungen, De-Dollarisierung</p>
+            <div class="nn-logic">
+                [AURA_LOGIC]: Increasing correlation between geopolitical instability and Gold/Bitcoin demand. USD Purchasing Power under pressure.
+            </div>
+        </div>
+    </div>
+
+    <div class="sector-title">TECH & SEMICONDUCTORS</div>
+    <div class="grid">
+        <div class="card">
+            <span class="status-badge buy-badge">NEURAL SIGNAL: BUY</span>
+            <h3>NVIDIA (NVDA)</h3>
+            <div class="price">191.13 USD <small style="color: var(--sell); font-size: 0.5em;">-1.2%</small></div>
+            <p style="font-size: 0.9em; color: #9ca3af;">News-Volume: 890/h | Sentiment: 0.72</p>
+            <div class="nn-logic">
+                [AURA_LOGIC]: Correlation between Blackwell shipment news and price dip suggests high accumulation potential. RSI oversold.
+            </div>
+        </div>
+    </div>
+
+    <div class="sector-title">SMALL CAP HIGH-FLYERS (INSIDER DEALS)</div>
+    <div class="grid">
+        <div class="card" style="border-color: var(--insider);">
+            <span class="status-badge buy-badge" style="color: var(--insider); border-color: var(--insider);">MEGA BUY SIGNAL</span>
+            <h3>Lemonade (LMND)</h3>
+            <div class="price">94.80 USD</div>
+            <div style="background: var(--insider); color: #000; padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 0.8em; margin-bottom: 10px;">
+                CEO BOUGHT 12.000.000 USD
+            </div>
+            <p style="font-size: 0.9em; color: #9ca3af;">Short Interest: 15% | Catalyst: CEO Buy + AI-Claims-Efficency</p>
+            <div class="nn-logic" style="color: var(--insider);">
+                [AURA_LOGIC]: Massive CEO buy usually precedes 40-60% rally within 90 days. Early party detected.
+            </div>
+        </div>
+    </div>
+
+    <div class="sector-title">KRYPTOWÄHRUNGEN & METALLE</div>
+    <div class="grid">
+        <div class="card">
+            <span class="status-badge hold-badge">NEURAL SIGNAL: HOLD</span>
+            <h3>Bitcoin (BTC)</h3>
+            <div class="price">77,072.00 USD</div>
+            <div class="nn-logic" style="color: #94a3b8;">
+                [AURA_LOGIC]: Low-volatility weekend mode. Monitoring exchange inflows. No catalyst detected.
+            </div>
+        </div>
+    </div>
+
+    <div class="sector-title">🎰 PENNYSTOCK ZOCKER-ECKE (LONG/SHORT)</div>
+    <div class="grid" id="pennystocks">
+        <div class="card" style="border-left: 4px solid #a855f7;">
+            <span class="status-badge buy-badge" style="color: #a855f7; border-color: #a855f7;">VOLATILE SCAN</span>
+            <h3>SNDL Inc (SNDL)</h3>
+            <p>Preis: 2.15 USD</p>
+            <p style="color: #94a3b8;">Short Ratio: 5.4 | Hype: Reddit/WSB Mention</p>
+            <div class="nn-logic">
+                [AURA_LOGIC]: High short interest detected. Potential for squeeze. Monitoring volume spikes.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
