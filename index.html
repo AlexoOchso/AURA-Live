@@ -30,6 +30,8 @@
         .insider-banner { background: rgba(251, 191, 36, 0.1); border: 1px solid var(--insider); color: var(--insider); padding: 12px; border-radius: 10px; font-size: 0.9em; margin-bottom: 20px; animation: pulse 2s infinite; }
         .nn-logic { background: #000; border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: #34d399; margin-top: 15px; border: 1px dashed #334155; }
         @keyframes pulse { 0% { opacity: 0.8; } 50% { opacity: 1; } 100% { opacity: 0.8; } }
+        .ticker-wrap { background: #111827; padding: 10px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #374151; overflow: hidden; white-space: nowrap; }
+        .ticker-item { display: inline-block; padding: 0 30px; color: var(--accent); font-weight: bold; }
     </style>
 </head>
 <body>
@@ -41,12 +43,26 @@
         </div>
     </header>
 
+    <div class="ticker-wrap">
+        <marquee scrollamount="5">
+            <span class="ticker-item">+++ [AURA NEWS]: ÖL-PREIS STEIGT DURCH GEOPOLITISCHE SPANNUNGEN IM NAHEN OSTEN +++</span>
+            <span class="ticker-item">+++ [AURA NEWS]: SOLANA (SOL) ZEIGT MASSIVE ON-CHAIN ABFLÜSSE - VORSICHT BEI LONG-POSITIONEN +++</span>
+            <span class="ticker-item">+++ [AURA NEWS]: NVIDIA INSIDER-KÄUFE STÜTZEN KURS BEI 185 USD +++</span>
+        </marquee>
+    </div>
+
     <div class="insider-banner">
         🚀 <strong>CRITICAL HYPE ALERT:</strong> Massive Insider Buying detected in <strong>Lemonade (LMND)</strong> & <strong>GameStop (GME)</strong>. Sentiment-Delta > 45%.
     </div>
 
     <div class="sector-title">🎮 LIVE PAPER TRADING (OFFENE POSITIONEN)</div>
     <div class="grid">
+        <div class="card" style="border-left: 4px solid #ef4444;">
+            <div style="float: right; color: #ef4444; font-weight: bold;">SHORT</div>
+            <h3>Solana (SOL)</h3>
+            <p>Entry: 104.39 USD | Signal: SELL</p>
+            <div class="nn-logic">[LOGIC]: Neural Alert (-0.98). Heavy chain outflows detected. Early exit signal.</div>
+        </div>
         <div class="card" style="border-left: 4px solid #10b981;">
             <div style="float: right; color: #10b981; font-weight: bold;">+1.2%</div>
             <h3>NVIDIA (NVDA)</h3>
@@ -54,10 +70,10 @@
             <div class="nn-logic">[LOGIC]: Insider support confirmed. High alpha expected.</div>
         </div>
         <div class="card" style="border-left: 4px solid #10b981;">
-            <div style="float: right; color: #94a3b8; font-weight: bold;">0.0%</div>
-            <h3>Silver (SI=F)</h3>
-            <p>Entry: 22.50 USD | Signal: BUY</p>
-            <div class="nn-logic">[LOGIC]: Macro hedge logic. Strong technical rebound predicted.</div>
+            <div style="float: right; color: #10b981; font-weight: bold;">LONG</div>
+            <h3>Crude Oil (CL=F)</h3>
+            <p>Entry: 78.40 USD | Signal: BUY</p>
+            <div class="nn-logic">[LOGIC]: Geopolitical premium rising. Inventory drop expected.</div>
         </div>
     </div>
 
